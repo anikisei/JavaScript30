@@ -63,9 +63,9 @@
 
     // 7. sort Exercise
     // Sort the people alphabetically by last name
-    const alphabetical = people.sort((firstOne, lastOne) => {
-      const [aLast, aFirst] = firstOne.split(', ');
-      const [bLast, bFirst] = lastOne.split(', ');
+    const alphabetical = people.sort((lastPerson, nextPerson) => {
+      const [aLast, aFirst] = lastPerson.split(', ');
+      const [bLast, bFirst] = nextPerson.split(', ');
       return aLast > bLast ? 1 : -1;
     });
     console.log(alphabetical);
